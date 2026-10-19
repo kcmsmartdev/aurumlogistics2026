@@ -47,7 +47,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 bg-white">
-      <nav className="flex items-center justify-between px-3 py-2.5">
+      <nav className="max-w-7xl mx-auto flex items-center justify-between px-3 py-2.5">
         <Link href="/" onClick={closeMenu}>
           <Image
             src="/logo.png"
@@ -58,6 +58,12 @@ export default function Navbar() {
             className="h-auto w-48"
           />
         </Link>
+
+        <ul className="hidden lg:flex justify-between items-center gap-4">
+          {
+            
+          }
+        </ul>
 
         <button
           type="button"
