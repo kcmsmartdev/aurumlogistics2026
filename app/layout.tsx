@@ -1,19 +1,19 @@
 import type { Metadata } from "next";
-import { DM_Sans, Momo_Trust_Sans } from "next/font/google";
+import {Teachers, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Footer from "@/components/ui/Footer";
 
-const heading = Momo_Trust_Sans({
+const heading = Teachers({
   variable:"--font-heading",
   subsets:["latin"],
-  weight:["700"],
+  weight:["400","700","800"],
   display:"swap"
 
 })
 
 const body = DM_Sans({
-  variable: "--fon-body",
+  variable: "--font-body",
   subsets:["latin"],
   weight:"400",
   display:"swap"

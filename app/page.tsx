@@ -1,5 +1,6 @@
 import { Metadata } from "next";
-
+import Hero from "@/components/inicio/Hero";
+import Nosotros from "@/components/inicio/Nosotros";
 export const metadata:Metadata ={
   title:"Inicio",
   description:"dsdsdsd"
@@ -8,7 +9,8 @@ export const metadata:Metadata ={
 export default function Home() {
   return (
    <main>
-      
+      <Hero />
+      <Nosotros />
    </main>
   );
 }
