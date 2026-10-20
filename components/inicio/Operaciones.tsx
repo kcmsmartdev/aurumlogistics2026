@@ -5,8 +5,8 @@ export default function Operaciones(){
     return(
         <section className="w-full bg-accent">
             <div className="max-w-7xl mx-auto px-3 grid grid-cols-1 lg:grid-cols-2">
-                <div className="grid grid-cols-[1fr_0.56fr]">
-                    <div className="flex flex-col gap-16 py-28 px-5">
+                <div className="grid grid-cols-1 sm:grid-cols-[1fr_0.56fr]">
+                    <div className="flex flex-col gap-16 py-12 sm:py-24 px-5">
                         <h2 className="font-heading text-white text-4xl font-bold uppercase">
                             Estadística de <span className="font-normal">Operaciones</span>
                         </h2>
