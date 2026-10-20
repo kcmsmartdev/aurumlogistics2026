@@ -74,41 +74,6 @@ export default function Navbar() {
   const closeMenu = () => setOpen(false)
 
   return (
-<<<<<<< HEAD
-    <header className="fixed inset-x-0 top-0 z-50 bg-white">
-      <nav className="max-w-7xl mx-auto flex items-center justify-between px-3 py-2.5">
-        <Link href="/" onClick={closeMenu}>
-          <Image
-            src="/logo.png"
-            width={450}
-            height={20}
-            alt="logo"
-            priority
-            className="h-auto w-48"
-          />
-        </Link>
-
-        <ul className="hidden lg:flex justify-between items-center gap-4">
-          {
-            
-          }
-        </ul>
-
-        <button
-          type="button"
-          onClick={() => setOpen(!isOpen)}
-          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
-          aria-expanded={isOpen}
-          className="lg:hidden"
-        >
-          {isOpen ? (
-            <MdClose className="size-8" />
-          ) : (
-            <HiOutlineMenuAlt4 className="size-8" />
-          )}
-        </button>
-      </nav>
-=======
 
    <header className="fixed w-full bg-white">
       <nav className="max-w-7xl mx-auto px-3 py-2.5 flex flex-row items-center justify-between relative">
@@ -130,7 +95,6 @@ export default function Navbar() {
               const isActive = isGroup
                 ? item.children.some((child) => child.href === pathname)
                 : item.href === pathname
->>>>>>> 2295864 (se agrega section de hero y nosotros)
 
               const triggerClass = `flex items-center gap-2.5 border-b-4 py-2 font-body text-sm font-semibold uppercase tracking-wide text-black transition-colors duration-300 hover:border-primary ${
                 isActive ? "border-primary" : "border-transparent"
