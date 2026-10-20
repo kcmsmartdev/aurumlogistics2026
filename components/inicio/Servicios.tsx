@@ -34,7 +34,7 @@ export default function Servicios(){
                                         loading="lazy"
                                         className="max-w-160  transition-transform duration-300 ease-in-out hover:scale-125"/>
                                 </div>
-                                <Link href={e.href} className="absolute z-10 bottom-4 left-1/2 -translate-x-1/2 translate-y-7 whitespace-nowrap bg-primary px-16 lg:px-20 py-3 font-heading text-2xl uppercase text-white transition-transform duration-300 ease-in-out group-hover:translate-y-14 group-focus-within:translate-y-10">
+                                <Link href={e.href} className="absolute z-10 bottom-4 left-1/2 -translate-x-1/2 translate-y-7 whitespace-nowrap bg-primary px-5 lg:px-20 py-3 font-heading text-2xl uppercase text-white transition-transform duration-300 ease-in-out group-hover:translate-y-14 group-focus-within:translate-y-10">
                                     {e.title}
                                 </Link>
                             </article>
