@@ -62,7 +62,7 @@ export default function Nosotros() {
                     tu empresa.
                 </p>
 
-                <div className="mt-10 flex flex-col items-start gap-4">
+                <div className="mt-10 flex flex-col items-start gap-4 lg:max-w-xl">
                     {cards.map(({title, paragraphs}, index) => {
                         const isOpen = openIndex === index
 

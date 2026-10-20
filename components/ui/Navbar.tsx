@@ -75,7 +75,7 @@ export default function Navbar() {
 
   return (
 
-   <header className="fixed w-full bg-white">
+   <header className="fixed z-50 w-full bg-white">
       <nav className="max-w-7xl mx-auto px-3 py-2.5 flex flex-row items-center justify-between relative">
         <Link href={logo.href} >
           <Image 
