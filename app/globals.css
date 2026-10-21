@@ -1,5 +1,23 @@
 @import "tailwindcss";
+:root {
+    --font-heading: var(--font-heading),  Arial, sans-serif;
+    --font-body: var(--font-body), sans-serif;
 
+    --color-primary: #015089;
+    --color-secondary: #78A2C1;
+    --color-accent: #454E60;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-muted: #4C4C4C;
+    --color-muted-reverse: #CBCBCB;
+    --color-gray: #F2F2F2;
+    --color-border: #E1E1E1;
+    
+    --color-error: #B70303;
+    --color-alert: #B35604;
+    --color-positive: #047A24;
+
+}
 @theme {
 
     --font-heading: var(--font-heading),  Arial, sans-serif;
@@ -13,7 +31,7 @@
     --color-muted: #4C4C4C;
     --color-muted-reverse: #CBCBCB;
     --color-gray: #F2F2F2;
-    --color-border: #5C6574;
+    --color-border: #E1E1E1;
     
     --color-error: #B70303;
     --color-alert: #B35604;

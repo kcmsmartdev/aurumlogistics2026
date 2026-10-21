@@ -162,7 +162,7 @@ export default function Navbar() {
           {isOpen ? <MdClose className="size-8" /> : <HiOutlineMenuAlt4 className="size-8" />}
         </button>
 
-        <div className={`absolute right-0 top-full max-h-[calc(100dvh-100%)] w-1/2 overflow-y-auto bg-white px-3 py-5  transition-all duration-300 ease-in-out lg:hidden ${
+        <div className={`absolute right-0 top-full h-[calc(100dvh-100%)] w-full overflow-y-auto bg-white px-3 py-5  transition-all duration-300 ease-in-out lg:hidden ${
         isOpen ? "translate-x-0" : "invisible translate-x-full"}`}>
             <div>
                 <ul className="flex flex-col gap-2">

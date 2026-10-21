@@ -32,6 +32,7 @@ const linksFooter:FooterSection[]=[
         {title:"Contacto", href:"/contacto"},
         {title:"Seguimiento de Carga", href:"/tracking"},
         {title:"Seguimiento de Reclamos", href:"/seguimiento-reclamo"},
+        {title:"Consulta de una DAM", href:"https://ww3.sunat.gob.pe/aduanas/informao/HR10Poliza.htm"},
         {title:"Descargar Folleto", href:"#"},    
     ]},
 
