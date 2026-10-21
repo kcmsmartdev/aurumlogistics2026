@@ -32,7 +32,7 @@ export default function Responsabilidad(){
                         className="w-full h-auto"/>
 
                         <div className="mt-16">
-                            <h1 className="font-heading text-4xl md:text-5xl lg:text-5xl font-bold uppercase tracking-wide leading-[1.05] text-balance mb-3">
+                            <h1 className="font-heading text-4xl md:text-5xl lg:text-5xl font-bold uppercase tracking-wide leading-[1.05] text-balance mb-12">
                            Nuestro compromiso con una minería responsable
                             </h1>
 
@@ -45,7 +45,7 @@ export default function Responsabilidad(){
                         </div>
                     </div>
 
-                    <div className="px-10 border-l border-border">
+                    <div className="px-5 lg:px-10 lg:border-l lg:border-border mt-16 lg:mt-0">
                         <h2 className="font-heading font-bold text-primary text-3xl uppercase tracking-wider">
                             SOLUCIONES PARA TU NEGOCIO
                         </h2>

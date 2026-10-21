@@ -17,7 +17,7 @@ const listaContacto:Contacto[]= [
 ]
 export default function ContactoLista(){
     return(
-        <div className="flex flex-col mt-16">
+        <div className="w-full flex flex-col mt-16">
             <h2 className="font-heading font-bold text-primary text-2xl uppercase tracking-widest">
                 Contactos
             </h2>
