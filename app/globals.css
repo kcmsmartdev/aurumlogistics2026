@@ -1,7 +1,5 @@
 @import "tailwindcss";
 :root {
-    --font-heading: var(--font-heading),  Arial, sans-serif;
-    --font-body: var(--font-body), sans-serif;
 
     --color-primary: #015089;
     --color-secondary: #78A2C1;
@@ -20,8 +18,8 @@
 }
 @theme {
 
-    --font-heading: var(--font-heading),  Arial, sans-serif;
-    --font-body: var(--font-body), sans-serif;
+    --font-heading: var(--font-heading);
+    --font-body: var(--font-body);
 
     --color-primary: #015089;
     --color-secondary: #78A2C1;

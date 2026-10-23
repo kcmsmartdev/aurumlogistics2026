@@ -16,33 +16,33 @@ export default function Nosotros(){
     return(
         <main className="flex flex-col">
             <div className="mt-16 w-full h-48 flex flex-col items-center justify-center lg:h-72 bg-center bg-cover bg-no-repeat" style={{backgroundImage:"url('/images/bg-services.webp')"}} >
-                <p className="font-body font-bold text-white text-3xl">
+                <p className="font-body font-bold text-white text-3xl lg:text-5xl">
                     SOBRE NOSOTROS
                 </p>
             </div>
             <div className="w-full max-w-7xl mx-auto px-3 py-16">
                <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.5fr] gap-12 lg:gap-16">
                 
-                <div className="flex flex-col gap-5">
-                     <h1 className="ont-heading text-4xl md:text-5xl lg:text-5xl font-bold uppercase tracking-wide leading-[1.05] text-balance mb-3">
+                <div className="flex flex-col">
+                     <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold uppercase mb-4">
                         Somos parte de tu cadena logística.
                     </h1>
-                <p className="font-body text-xl md:text-xl font-medium leading-snug text-pretty max-w-[60ch] [&_strong]:font-semibold">
-                    <strong><i>Aurum Logistics S.A.C.</i></strong> Nace como una iniciativa vinculada a <strong><i>Aurum Metals S.R.L.</i></strong> , empresa con experiencia en el sector de la pequeña minería y la minería artesanal, brindando soporte a proyectos de formalización y procesos orientados a la exportación.
-                </p>
+                    <p className="font-body text-xl md:text-xl text-muted font-medium mb-4">
+                        <strong><i>Aurum Logistics S.A.C.</i></strong> Nace como una iniciativa vinculada a <strong><i>Aurum Metals S.R.L.</i></strong> , empresa con experiencia en el sector de la pequeña minería y la minería artesanal, brindando soporte a proyectos de formalización y procesos orientados a la exportación.
+                    </p>
 
-                <p className="font-body text-base md:text-lg leading-7 text-muted text-pretty max-w-[65ch] [&_strong]:font-semibold [&_a]:text-primary [&_a]:underline [&_a]:decoration-primary/40 [&_a]:underline-offset-4 [&_a]:transition-colors [&_a]:duration-300 [&_a:hover]:decoration-primary">
-                    Con el propósito de ampliar las <strong>
-                        <Link href={"/servicios"}>soluciones</Link></strong> relacionadas con el comercio internacional, surge <i>Aurum Logistics</i>, enfocada en la coordinación de operaciones de transporte internacional de mercancías para empresas importadoras y exportadoras, por vía <strong><Link href={"/servicios/transporte-aereo"}>aérea</Link></strong>, <strong><Link href={"/servicios/transporte-maritimo"}>marítima</Link></strong> y <strong><Link href={"/servicios/transporte-terrestre"}>terrestre</Link></strong>.
-                </p>
+                    <p className="font-body text-xl md:text-xl text-muted font-medium mb-4">
+                        Con el propósito de ampliar las <strong>
+                            <Link href={"/servicios"}>soluciones</Link></strong> relacionadas con el comercio internacional, surge <i>Aurum Logistics</i>, enfocada en la coordinación de operaciones de transporte internacional de mercancías para empresas importadoras y exportadoras, por vía <strong><Link href={"/servicios/transporte-aereo"}>aérea</Link></strong>, <strong><Link href={"/servicios/transporte-maritimo"}>marítima</Link></strong> y <strong><Link href={"/servicios/transporte-terrestre"}>terrestre</Link></strong>.
+                    </p>
 
-                <p className="font-body text-base md:text-lg leading-7 text-muted text-pretty max-w-[65ch]">
-                    Junto con Aurum Customs, especializada en agenciamiento aduanero, estas empresas participan en distintas etapas de las operaciones de comercio internacional, de acuerdo con las necesidades de cada cliente.
-                </p>
+                    <p className="font-body text-xl md:text-xl text-muted font-medium mb-4">
+                        Junto con Aurum Customs, especializada en agenciamiento aduanero, estas empresas participan en distintas etapas de las operaciones de comercio internacional, de acuerdo con las necesidades de cada cliente.
+                    </p>
 
-                <p className="font-body text-base text-muted italic">
-                    Desde el Callao, Perú, buscamos contribuir al desarrollo de las operaciones de nuestros clientes mediante una coordinación logística responsable, una comunicación clara y soluciones adaptadas a sus requerimientos.
-                </p> 
+                    <p className="font-body text-xl md:text-xl text-muted font-medium">
+                        "Desde el Callao, Perú, buscamos contribuir al desarrollo de las operaciones de nuestros clientes mediante una coordinación logística responsable, una comunicación clara y soluciones adaptadas a sus requerimientos".
+                    </p> 
 
                 </div>
 

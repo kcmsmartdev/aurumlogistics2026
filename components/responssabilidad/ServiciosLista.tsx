@@ -16,7 +16,7 @@ export default function ServiciosLista(){
                 <li key={e.name} className="group relative border-b border-border">
                 <Link
                     href={e.href}
-                    className="block py-5 font-heading text-base uppercase text-black transition-colors duration-300 group-hover:text-primary focus-visible:outline-none motion-reduce:transition-none"
+                    className="block py-5 font-heading text-base font-semibold  uppercase text-muted transition-colors duration-300 group-hover:text-primary focus-visible:outline-none motion-reduce:transition-none"
                 >
                     {e.name}
                 </Link>

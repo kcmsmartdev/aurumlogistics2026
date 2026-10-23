@@ -18,7 +18,7 @@ const listaContacto:Contacto[]= [
 export default function ContactoLista(){
     return(
         <div className="w-full flex flex-col mt-16">
-            <h2 className="font-heading font-bold text-primary text-2xl uppercase tracking-widest">
+            <h2 className="font-heading font-bold text-primary text-2xl uppercase tracking-wider">
                 Contactos
             </h2>
 
@@ -27,9 +27,9 @@ export default function ContactoLista(){
                     listaContacto.map((e)=>{
                         const Icon = e.icon
                         return(
-                        <li key={e.name} className="py-4">
+                        <li key={e.name} className="py-2">
                             <Link href={e.href} target="_blank"
-                            className="flex flex-row gap-4 items-center font-body text-black text-lg hover:text-primary">
+                            className="flex flex-row gap-4 items-center font-body text-black text-base hover:text-primary">
                                 <Icon className="text-secondary size-4" />
                                 {e.name}
                             </Link>
@@ -39,16 +39,16 @@ export default function ContactoLista(){
                 }
             </ul>
 
-             <div className="mt-16">
-                <h2 className="font-heading font-bold text-primary text-2xl uppercase tracking-widest mb-4">
+             <div className="mt-12">
+                <h2 className="font-heading font-bold text-primary text-2xl uppercase tracking-wider mb-4">
                     Folleto
                 </h2>
 
                 <Link 
                 target="_blank" 
                 href={"https://www.dropbox.com/scl/fi/h06tny5uz1hxtmh15scjb/Brochure_Aurum_Logistics.pdf?rlkey=xgx0fbbcsnxermqwsqjfb4wz9&st=6lajk2rb&dl=1"}
-                className="font-heading text-xl text-white font-semibold bg-primary p-5 flex flex-row items-center justify-center gap-2  ">
-                    <IoMdDownload className="size-5" />
+                className="font-heading text-xl text-white font-semibold bg-primary p-5 flex flex-row items-center justify-center gap-2 hover:bg-black group">
+                    <IoMdDownload className="size-5  group-hover:text-secondary group-hover:scale-150 transition-transform duration-300 ease-in-out" />
                     DESCARGAR
                 </Link>
              </div>

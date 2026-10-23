@@ -16,7 +16,7 @@ export default function Responsabilidad(){
     return(
         <main className="flex flex-col">
             <div className="mt-16 w-full h-48 flex flex-col items-center justify-center lg:h-72 bg-center bg-cover bg-no-repeat" style={{backgroundImage:"url('/images/bg-responsabilidad.webp')"}} >
-                <p className="font-body font-bold text-white text-3xl">
+                <p className="font-body font-bold text-white text-3xl lg:text-5xl">
                     RESPONSABILIDAD
                 </p>
             </div>
@@ -32,11 +32,11 @@ export default function Responsabilidad(){
                         className="w-full h-auto"/>
 
                         <div className="mt-16">
-                            <h1 className="font-heading text-4xl md:text-5xl lg:text-5xl font-bold uppercase tracking-wide leading-[1.05] text-balance mb-12">
+                            <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold uppercase mb-4">
                            Nuestro compromiso con una minería responsable
                             </h1>
 
-                            <p className="font-body text-xl md:text-xl text-muted font-medium leading-snug text-pretty max-w-[60ch] [&_strong]:font-semibold">
+                            <p className="font-body text-xl md:text-xl text-muted font-medium">
                             Creemos que el comercio internacional debe desarrollarse con responsabilidad y respeto por las personas y el medio ambiente. Por ello, promovemos prácticas responsables en las operaciones vinculadas al sector minero, priorizando la formalidad, la trazabilidad y el cumplimiento de nuestros criterios de trabajo.
                             </p>
 
@@ -46,7 +46,7 @@ export default function Responsabilidad(){
                     </div>
 
                     <div className="px-5 lg:px-10 lg:border-l lg:border-border mt-16 lg:mt-0">
-                        <h2 className="font-heading font-bold text-primary text-3xl uppercase tracking-wider">
+                        <h2 className="font-heading font-bold text-primary text-2xl uppercase tracking-wider">
                             SOLUCIONES PARA TU NEGOCIO
                         </h2>
 
