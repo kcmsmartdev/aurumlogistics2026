@@ -19,6 +19,7 @@ const linksFooter:FooterSection[]=[
         {title:"Nosotros", href:"/nostros"},
         {title:"Responsabilidad", href:"/respondabilidad"},
         {title:"Tarifas", href:"/tarifas"},
+        {title:"Contacto", href:"/contacto"},
     ]},
 
     {title:"Servicios", child:[
@@ -29,8 +30,7 @@ const linksFooter:FooterSection[]=[
     ]},
 
     {title:"Atención al cliente", child:[
-        {title:"Contacto", href:"/contacto"},
-        {title:"Seguimiento de Carga", href:"/tracking"},
+        {title:"Tracking", href:"/tracking"},
         {title:"Seguimiento de Reclamos", href:"/seguimiento-reclamo"},
         {title:"Consulta de una DAM", href:"https://ww3.sunat.gob.pe/aduanas/informao/HR10Poliza.htm"},
         {title:"Descargar Folleto", href:"#"},    
@@ -38,9 +38,9 @@ const linksFooter:FooterSection[]=[
 
 
     {title:"Información legal", child:[
-        {title:"Política de T&C", href:"/politica-de-t&c"},
-        {title:"Política de Privacidad", href:"/politica-de-privacidad"},
-        {title:"Política de Cookies", href:"/politica-de-cookies"},   
+        {title:"Política de T&C", href:"/informacion-legal/terminos-y-condiciones"},
+        {title:"Política de Privacidad", href:"/informacion-legal/politica-de-privacidad"},
+        {title:"Política de Cookies", href:"/informacion-legal/politica-de-cookies"},   
     ]},
 ]
 export default function Footer(){
