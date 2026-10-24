@@ -7,6 +7,8 @@ const estadisticas = [
 ];
 
 export default function Estadisticas() {
+
+
   return (
     <section className="w-full flex flex-row sm:flex-col items-center justify-center sm:border-l border-border divide-x divide-border sm:divide-x-0 sm:divide-y text-center">
   {estadisticas.map((item) => (

@@ -1,4 +1,5 @@
 
+import Cta from "@/components/ui/Cta";
 import Link from "next/link";
 
 export default function PoliticaDeCookies() {
@@ -419,6 +420,8 @@ export default function PoliticaDeCookies() {
           </section>
         </div>
       </section>
+
+      <Cta />
     </main>
   );
 }

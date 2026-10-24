@@ -78,7 +78,7 @@ export default function FormularioContacto(){
                 <button
                     type="submit"
                     disabled={estado === "enviando"}
-                    className="w-full font-heading font-semibold uppercase bg-primary px-5 py-6 text-white cursor-pointer">
+                    className="w-full font-body font-semibold uppercase bg-primary px-5 py-6 text-white cursor-pointer">
                         {estado === "enviando" ? "Enviando..." : "Enviar solicitud de cotización"}
                 </button>
                 <p role="status" aria-live="polite" className="min-h-6 font-body text-sm">

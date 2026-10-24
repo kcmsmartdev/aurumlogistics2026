@@ -45,13 +45,15 @@ export default function Responsabilidad(){
                         </div>
                     </div>
 
-                    <div className="px-5 lg:px-10 lg:border-l lg:border-border mt-16 lg:mt-0">
-                        <h2 className="font-heading font-bold text-primary text-2xl uppercase tracking-wider">
-                            SOLUCIONES PARA TU NEGOCIO
-                        </h2>
+                    <div className="relative">
+                            <div className="px-5 lg:px-10 lg:border-l lg:border-border mt-16 lg:mt-0 sticky top-20 z-10">
+                            <h2 className="font-heading font-bold text-primary text-2xl uppercase tracking-wider">
+                                SOLUCIONES PARA TU NEGOCIO
+                            </h2>
 
-                        <ServiciosLista />
-                        <ContactoLista />
+                            <ServiciosLista />
+                            <ContactoLista />
+                        </div>
                     </div>
                 </div>
             </div>

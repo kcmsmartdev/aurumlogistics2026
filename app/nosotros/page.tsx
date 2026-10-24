@@ -5,6 +5,11 @@ import { Metadata } from "next"
 import Cta from "@/components/ui/Cta"
 import Mision from "@/components/ui/Mison"
 import AurumGrupo from "@/components/ui/AurumGrupo"
+import ServiciosLista from "@/components/responssabilidad/ServiciosLista"
+import ContactoLista from "@/components/ui/ContactoLista"
+import Contador from "@/components/ui/Contador"
+import AnimEstadisticas from "@/components/ui/AnimEstadisticas"
+import CardServicios from "@/components/nosotros/CardServicios"
 
 
 export const metadata:Metadata={
@@ -24,7 +29,7 @@ export default function Nosotros(){
                <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.5fr] gap-12 lg:gap-16">
                 
                 <div className="flex flex-col">
-                     <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold uppercase mb-4">
+                     <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold uppercase mb-8">
                         Somos parte de tu cadena logística.
                     </h1>
                     <p className="font-body text-xl md:text-xl text-muted font-medium mb-4">
@@ -40,23 +45,27 @@ export default function Nosotros(){
                         Junto con Aurum Customs, especializada en agenciamiento aduanero, estas empresas participan en distintas etapas de las operaciones de comercio internacional, de acuerdo con las necesidades de cada cliente.
                     </p>
 
-                    <p className="font-body text-xl md:text-xl text-muted font-medium">
-                        "Desde el Callao, Perú, buscamos contribuir al desarrollo de las operaciones de nuestros clientes mediante una coordinación logística responsable, una comunicación clara y soluciones adaptadas a sus requerimientos".
+                    <p className="font-body text-xl md:text-xl text-muted font-medium ">
+                        Desde el Callao, Perú, buscamos contribuir al desarrollo de las operaciones de nuestros clientes mediante una coordinación logística responsable, una comunicación clara y soluciones adaptadas a sus requerimientos.
                     </p> 
 
+                    <CardServicios />
+                    
                 </div>
 
-                <div className="flex flex-col  ">
-                    <h2 className="font-heading font-bold text-primary text-3xl uppercase tracking-wider">
-                        +5 de Años de Experiencia
-                    </h2>
 
-                   <Mision />
-
-                    <AurumGrupo />
-                  
+                <div className="relative">
+                    <div className="flex flex-col px-5 lg:px-10 lg:border-l lg:border-border mt-16 lg:mt-0 md:sticky md:top-20 md:z-10">
+                        <h2 className="font-heading font-bold text-primary text-3xl uppercase tracking-wider">
+                            +5 de Años de Experiencia
+                        </h2>
+                        <Mision />
+                        <ContactoLista />
+                    </div>
                 </div>
                </div>
+
+               
             </div>
 
             <div className="w-full mt-16">

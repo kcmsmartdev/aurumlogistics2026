@@ -1,4 +1,5 @@
 
+import Cta from "@/components/ui/Cta";
 import Link from "next/link";
 
 export default function PoliticaDePrivacidad() {
@@ -621,6 +622,7 @@ export default function PoliticaDePrivacidad() {
           </section>
         </div>
       </section>
+       <Cta />
     </main>
   );
 }

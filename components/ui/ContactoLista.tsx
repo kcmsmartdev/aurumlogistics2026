@@ -1,6 +1,7 @@
-import { IoMailUnread } from "react-icons/io5";
-import { SiGooglemaps } from "react-icons/si";
-import { FaPhoneAlt } from "react-icons/fa";
+
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { IoMail } from "react-icons/io5";
+import { TbGpsFilled } from "react-icons/tb";
 import { IconType } from "react-icons";
 import { IoMdDownload } from "react-icons/io";
 import Link from "next/link";
@@ -11,9 +12,9 @@ interface Contacto{
 }
 
 const listaContacto:Contacto[]= [
-    {icon:FaPhoneAlt, name:"+51 950 306 765", href:"callto:51950306765" },
-    {icon:SiGooglemaps, name:"Centro Aéreo Comercial, Callao", href:"https://maps.app.goo.gl/VBZmHw5W2v1U1N96A" },
-    {icon:FaPhoneAlt, name:"gerencia@aurumlogistics.com.pe", href:"mailto:gerencia@aurumlogistics.com.pe" },
+    {icon:BsFillTelephoneFill, name:"+51 950 306 765", href:"callto:51950306765" },
+    {icon:TbGpsFilled, name:"Centro Aéreo Comercial, Callao", href:"https://maps.app.goo.gl/VBZmHw5W2v1U1N96A" },
+    {icon:IoMail, name:"gerencia@aurumlogistics.com.pe", href:"mailto:gerencia@aurumlogistics.com.pe" },
 ]
 export default function ContactoLista(){
     return(
@@ -30,7 +31,7 @@ export default function ContactoLista(){
                         <li key={e.name} className="py-2">
                             <Link href={e.href} target="_blank"
                             className="flex flex-row gap-4 items-center font-body text-black text-base hover:text-primary">
-                                <Icon className="text-secondary size-4" />
+                                <Icon className="text-primary size-4" />
                                 {e.name}
                             </Link>
                         </li>)

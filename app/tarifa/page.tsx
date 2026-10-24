@@ -6,13 +6,14 @@ import TiempoServicio from "@/components/tarifas/TiempoServicio"
 import ContactoLista from "@/components/ui/ContactoLista"
 import Cta from "@/components/ui/Cta"
 import { Metadata } from "next"
-export const matedata:Metadata ={
+
+export const matedata:Metadata= {
     title:"Tarifas de Transporte Aéreo y Marítimo | Aurum Logistics",
     description:"Consulta las tarifas y los tiempos de atención para exportaciones aéreas y marítimas con Aurum Logistics. Conoce la información de cada servicio."
 }
 export default function Tarifa(){
     return(
-        <main className="flex flex-col relative">
+        <main className="flex flex-col">
            <div className="mt-16 w-full h-48 flex flex-col items-center justify-center lg:h-72 bg-black">
                 <p className="font-body font-bold text-white text-3xl lg:text-5xl">
                     TARIFARIO AURUM
@@ -20,8 +21,7 @@ export default function Tarifa(){
             </div>
 
             <div className="w-full max-w-7xl mx-auto flex flex-col px-3 py-28">
-                
-
+            
                 <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.5fr] gap-12 ">
                     <div className="flex flex-col">
                         <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold uppercase mb-3">

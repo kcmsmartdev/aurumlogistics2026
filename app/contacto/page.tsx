@@ -35,70 +35,72 @@ export default function Contacto(){
 
                 </div>
 
-                <div className="relative flex flex-col px-5 lg:px-10 lg:border-l lg:border-border mt-16 lg:mt-0">
-                    
-                    <div className="flex flex-col gap-5 divide-y divide-border sticky">
-                        <h2 className="font-heading font-bold text-primary text-3xl uppercase tracking-wider pb-8">
-                            Medios de contacto
-                        </h2>
-                        <div className="py-8">
-                            <h3 className="font-heading tracking-widest text-xs uppercase text-muted/80 font-semibold">
-                                TELÉFONO
-                            </h3>
-                            <ul className="mt-4">
-                                <li>
-                                    <Link href={"callto:51950306765"} 
-                                    className="flex flex-row items-center gap-5 font-body text-black  hover:text-primary"> 
-                                                                    
-                                        <BsFillTelephoneFill className="size-4 text-primary" />
-                                        +51 950 306 765
-                                    </Link>
-                                </li>
-                            </ul>
-                            <ul className="mt-4">
-                                <li>
-                                    <Link href={"callto:51933352145"} 
-                                    className="flex flex-row items-center gap-5 font-body text-black  hover:text-primary"> 
-                                                                    
-                                        <BsFillTelephoneFill className="size-4 text-primary" />
-                                        +51 933 352 145
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                <div className="relative">
+                    <div className="flex flex-col px-5 lg:px-10 lg:border-l lg:border-border mt-16 lg:mt-0 sticky top-20 z-10">
+                        
+                        <div className="flex flex-col gap-5 divide-y divide-border sticky">
+                            <h2 className="font-heading font-bold text-primary text-3xl uppercase tracking-wider pb-8">
+                                Medios de contacto
+                            </h2>
+                            <div className="py-8">
+                                <h3 className="font-heading tracking-widest text-xs uppercase text-muted/80 font-semibold">
+                                    TELÉFONO
+                                </h3>
+                                <ul className="mt-4">
+                                    <li>
+                                        <Link href={"callto:51950306765"} 
+                                        className="flex flex-row items-center gap-5 font-body text-black  hover:text-primary"> 
+                                                                        
+                                            <BsFillTelephoneFill className="size-4 text-primary" />
+                                            +51 950 306 765
+                                        </Link>
+                                    </li>
+                                </ul>
+                                <ul className="mt-4">
+                                    <li>
+                                        <Link href={"callto:51933352145"} 
+                                        className="flex flex-row items-center gap-5 font-body text-black  hover:text-primary"> 
+                                                                        
+                                            <BsFillTelephoneFill className="size-4 text-primary" />
+                                            +51 933 352 145
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
 
-                        <div className="py-8">
-                            <h3 className="font-heading tracking-widest text-xs uppercase text-muted/80 font-semibold">
-                                E-mail
-                            </h3>
-                            <ul className="mt-4">
-                                <li>
-                                    <Link href={"mailto:gerencia@aurumlogistics.com.pe"} 
-                                    className="flex flex-row items-center gap-5 font-body text-black  hover:text-primary"> 
-                                                                    
-                                        <IoMail className="size-4 text-primary" />
-                                        gerencia@aurumlogistics.com.pe
-                                    </Link>
-                                </li>
-                            </ul>
+                            <div className="py-8">
+                                <h3 className="font-heading tracking-widest text-xs uppercase text-muted/80 font-semibold">
+                                    E-mail
+                                </h3>
+                                <ul className="mt-4">
+                                    <li>
+                                        <Link href={"mailto:gerencia@aurumlogistics.com.pe"} 
+                                        className="flex flex-row items-center gap-5 font-body text-black  hover:text-primary"> 
+                                                                        
+                                            <IoMail className="size-4 text-primary" />
+                                            gerencia@aurumlogistics.com.pe
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="py-8">
+                                <h3 className="font-heading text-xs tracking-widest uppercase text-muted/80 font-semibold">
+                                    Dirección
+                                </h3>
+                                <ul className="mt-4">
+                                    <li>
+                                        <Link href={"https://maps.app.goo.gl/adbBF9PXGHN6MRWBA"} target="_blank"
+                                        className="flex flex-row items-center gap-5 font-body text-black  hover:text-primary"> 
+                                                                        
+                                            <TbGpsFilled className="size-4 text-primary" />
+                                            Centro Aéreo Comercial, Callao
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div className="py-8">
-                            <h3 className="font-heading text-xs tracking-widest uppercase text-muted/80 font-semibold">
-                                Dirección
-                            </h3>
-                            <ul className="mt-4">
-                                <li>
-                                    <Link href={"https://maps.app.goo.gl/adbBF9PXGHN6MRWBA"} target="_blank"
-                                    className="flex flex-row items-center gap-5 font-body text-black  hover:text-primary"> 
-                                                                    
-                                        <TbGpsFilled className="size-4 text-primary" />
-                                        Centro Aéreo Comercial, Callao
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                    
                     </div>
-                  
                 </div>
                </div>
             </div>

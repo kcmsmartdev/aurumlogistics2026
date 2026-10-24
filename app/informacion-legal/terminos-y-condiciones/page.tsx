@@ -1,4 +1,5 @@
 
+import Cta from "@/components/ui/Cta";
 import Link from "next/link";
 
 export default function TerminosYCondiciones() {
@@ -529,6 +530,7 @@ export default function TerminosYCondiciones() {
           </section>
         </div>
       </section>
+       <Cta />
     </main>
   );
 }
