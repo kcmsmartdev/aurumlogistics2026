@@ -3,22 +3,13 @@ import { BiWorld } from "react-icons/bi";
 import Link from "next/link";
 import Estadisticas from "../ui/Estadistica";
 import { PiArrowUpRightBold } from "react-icons/pi";
+import HeroVideo from "./HeroVideo";
 
 
 export default function Hero(){
     return(
         <section className="relative  w-full  bg-gray-400 min-h-screen">
-            <video
-            autoPlay
-            muted
-            loop
-            playsInline
-            preload="none"
-            poster=""
-            
-            className="absolute top-0 left-0 w-full h-full object-cover z-0 pointer-events-none">
-                <source src="/video/video-bg.webm" type="video/webm" />
-            </video>
+            <HeroVideo />
 
             <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-10" />
             <div className="relative z-20  max-w-7xl mx-auto px-3 py-28">
