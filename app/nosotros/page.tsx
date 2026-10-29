@@ -20,7 +20,7 @@ export default function Nosotros(){
 
     return(
         <main className="flex flex-col">
-            <div className="w-full h-48 flex flex-col items-center justify-center lg:h-72 bg-center bg-cover bg-no-repeat" style={{backgroundImage:"url('/images/bg-services.webp')"}} >
+            <div className="w-full h-52 flex flex-col items-center justify-center lg:h-80  py-28 bg-center bg-cover bg-no-repeat" style={{backgroundImage:"url('/images/bg-services.webp')"}} >
                 <p className="font-body font-bold text-white text-3xl lg:text-5xl">
                     SOBRE NOSOTROS
                 </p>

@@ -15,7 +15,7 @@ export const metadata:Metadata={
 export default function Responsabilidad(){
     return(
         <main className="flex flex-col">
-            <div className="w-full h-48 flex flex-col items-center justify-center lg:h-72 bg-center bg-cover bg-no-repeat" style={{backgroundImage:"url('/images/bg-responsabilidad.webp')"}} >
+            <div className="w-full h-52 flex flex-col items-center justify-center lg:h-80  py-28 bg-center bg-cover bg-no-repeat" style={{backgroundImage:"url('/images/bg-responsabilidad.webp')"}} >
                 <p className="font-body font-bold text-white text-3xl lg:text-5xl">
                     RESPONSABILIDAD
                 </p>
@@ -47,10 +47,7 @@ export default function Responsabilidad(){
 
                     <div className="relative">
                             <div className="px-5 lg:px-10 lg:border-l lg:border-border mt-16 lg:mt-0 sticky top-20 z-10">
-                            <h2 className="font-heading font-bold text-primary text-2xl uppercase tracking-wider">
-                                SOLUCIONES PARA TU NEGOCIO
-                            </h2>
-
+        
                             <ServiciosLista />
                             <ContactoLista />
                         </div>

@@ -102,7 +102,7 @@ export default function Navbar() {
           width={150}
           height={48}
           fetchPriority="high"
-          className="w-40 md:w-44 h-auto"/>
+          className="w-36 md:w-40 h-auto"/>
         </Link>
 
         <div className="hidden lg:flex flex-row justify-between items-center">

@@ -1,8 +1,8 @@
 import Contador from "@/components/ui/Contador";
 
 const estadisticas = [
-  { fin: 16, sufijo: "", etiqueta: "Clientes" },
-  { fin: 234, sufijo: "", etiqueta: "Operaciones" },
+  { fin: 20, sufijo: "+", etiqueta: "Clientes" },
+  { fin: 234, sufijo: "+", etiqueta: "Operaciones" },
   { fin: 100, sufijo: "%", etiqueta: "Satisfacción" },
 ];
 

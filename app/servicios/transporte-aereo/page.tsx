@@ -42,7 +42,7 @@ const cardServicios:Servicio[]=[
 export default function TransporteAereo(){
     return(
         <main className="flex flex-col">
-             <div className=" relative w-full h-auto py-28 flex flex-col items-center justify-center  bg-center bg-cover bg-no-repeat" style={{backgroundImage:"url('/images/img-bg-aereo.webp')"}} >
+            <div className=" relative w-full h-auto py-28 flex flex-col items-center justify-center  bg-center bg-cover bg-no-repeat" style={{backgroundImage:"url('/images/img-bg-aereo.webp')"}} >
                 <div className="absolute inset-0 bg-linear-to-r from-black to-primary/60 z-0 opacity-95"></div>
                 <div className="relative z-20 max-w-7xl mx-auto w-full px-3 py-2 flex flex-col gap-4">
                     
