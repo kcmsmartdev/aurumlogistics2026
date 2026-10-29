@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect  } from "react";
 import { usePathname } from "next/navigation";
 
 import { RiLoginCircleFill } from "react-icons/ri";
@@ -23,7 +23,7 @@ interface NavGroup {
 type MenuItem = NavLink | NavGroup
 
 const logo= {
-  logoUrl:"/logo.png",
+  logoUrl:"/logo-blanco.svg",
   href:"/",
   alt:"Logo Aurum Logistics SAC",
 }
@@ -58,24 +58,41 @@ const menuEspacial = {
 
 }
 const itemClass = (active: boolean) =>
-    `block w-full px-4 py-3 text-left font-body text-xs font-semibold uppercase tracking-wide transition-colors duration-300 ease-in-out ${
-        active ? "bg-primary text-white" : "text-black hover:bg-black/10"
+    `block w-full px-4 py-3 text-left font-body font-semibold text-base  uppercase tracking-wide transition-colors duration-300 ease-in-out ${
+        active ? "text-primary font-bold text-base" : "hover:text-primary"
     }`
 
     const itemClasSubmenu = (active: boolean) =>
     `block w-full px-4 py-3 text-left font-body text-xs font-semibold uppercase tracking-wide transition-colors duration-300 ease-in-out ${
-        active ? "bg-primary text-white" : "text-muted hover:bg-black/10"
+        active ? "bg-primary text-white" : "text-black hover:bg-secondary"
     }`
 
 export default function Navbar() {
+  const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setOpen] = useState(false);
   const [isSubmenuOpen, setSubmenuOpen] = useState(false);
   const pathname = usePathname();
   const closeMenu = () => setOpen(false)
 
+  useEffect(()=> {
+    const handleScroll = () => {
+
+            if (window.scrollY > 20) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll);
+  },[])
+
+
+
   return (
 
-   <header className="fixed z-50 w-full bg-white">
+   <header className={`fixed z-50 w-full ${isScrolled ? "bg-black/50 backdrop-blur-md shadow-sm" :"bg-transparent"}`}>
       <nav className="max-w-7xl mx-auto px-3 py-2.5 flex flex-row items-center justify-between relative">
         <Link href={logo.href} >
           <Image 
@@ -85,7 +102,7 @@ export default function Navbar() {
           width={150}
           height={48}
           fetchPriority="high"
-          className="w-36 md:w-44 h-auto"/>
+          className="w-40 md:w-44 h-auto"/>
         </Link>
 
         <div className="hidden lg:flex flex-row justify-between items-center">
@@ -96,8 +113,8 @@ export default function Navbar() {
                 ? item.children.some((child) => child.href === pathname)
                 : item.href === pathname
 
-              const triggerClass = `flex items-center gap-2.5 border-b-4 py-2 font-body text-sm font-semibold uppercase tracking-wide text-black transition-colors duration-300 hover:border-primary ${
-                isActive ? "border-primary" : "border-transparent"
+              const triggerClass = `flex items-center gap-2.5 border-b-4 py-2 font-body text-sm font-semibold uppercase tracking-wide text-white transition-colors duration-300 hover:border-secondary ${
+                isActive ? "border-secondary" : "border-transparent"
               }`
 
               return (
@@ -106,7 +123,7 @@ export default function Navbar() {
                     <>
                       <button type="button" aria-haspopup="menu" className={triggerClass}>
                         {item.name}
-                        <FaChevronDown className="size-3 text-primary transition-transform duration-300 group-hover:rotate-180 group-has-focus-visible:rotate-180" />
+                        <FaChevronDown className="size-3 text-secondary transition-transform duration-300 group-hover:rotate-180 group-has-focus-visible:rotate-180" />
                       </button>
 
                       <ul className="invisible absolute left-0 top-full z-50 flex min-w-64 translate-y-2 flex-col bg-white p-5 opacity-0 shadow transition-all duration-200 ease-out group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-has-focus-visible:visible group-has-focus-visible:translate-y-0 group-has-focus-visible:opacity-100">
@@ -137,18 +154,18 @@ export default function Navbar() {
 
         <div className="hidden lg:flex flex-row justify-between items-center">
           <ul className="flex flex-row gap-5">
-            <li className="bg-black/20 px-4 py-3 hover:bg-black group transition-colors duration-300 ease-in-out">
+            <li className="bg-gray px-4 py-3 group transition-colors duration-300 ease-in-out">
               <Link href={menuEspacial.tracking.href}
-              className="flex flex-row items-center gap-3 font-body font-semibold uppercase text-sm tracking-wide group-hover:text-white transition-colors duration-300 ease-in-out">
-                <RiLoginCircleFill  className="size-4 group-hover:text-secondary group-hover:scale-150 transition-transform duration-300 ease-in-out"/>
+              className="flex flex-row items-center gap-3 font-heading font-semibold uppercase text-sm tracking-wide text-black transition-colors duration-300 ease-in-out">
+                <RiLoginCircleFill  className="size-4 group-hover:text-primary group-hover:scale-150 transition-transform duration-300 ease-in-out"/>
                 {menuEspacial.tracking.name}
               </Link>
             </li>
 
-            <li className="bg-secondary hover:bg-black px-4 group py-3">
+            <li className="bg-black hover:bg-black px-4 group py-3">
               <Link href={menuEspacial.contacto.href}
-              className="flex items-center gap-3 font-body font-semibold uppercase text-sm tracking-wide group-hover:text-white transition-colors duration-300 ease-in-out">
-                <GrContact   className="size-4 group-hover:text-secondary group-hover:scale-150 transition-transform duration-300 ease-in-out"/>
+              className="flex items-center gap-3 font-heading font-semibold uppercase text-sm tracking-wide text-white transition-colors duration-300 ease-in-out">
+                <GrContact   className="size-4 text-white group-hover:text-secondary group-hover:scale-150 transition-transform duration-300 ease-in-out"/>
                 {menuEspacial.contacto.name}
               </Link>
             </li>
@@ -162,7 +179,7 @@ export default function Navbar() {
           {isOpen ? <MdClose className="size-8" /> : <HiOutlineMenuAlt4 className="size-8" />}
         </button>
 
-        <div className={`absolute right-0 top-full h-[calc(100dvh-100%)] w-full overflow-y-auto bg-white px-3 py-5  transition-all duration-300 ease-in-out lg:hidden ${
+        <div className={`absolute right-0 top-full h-[calc(100dvh-100%)] w-3/4 overflow-y-auto bg-white px-3 py-5  transition-all duration-300 ease-in-out lg:hidden ${
         isOpen ? "translate-x-0" : "invisible translate-x-full"}`}>
             <div>
                 <ul className="flex flex-col gap-2">
@@ -208,22 +225,22 @@ export default function Navbar() {
                               </li>
                           ))}
 
-                          <li className="mt-5 group bg-black/20 px-4 py-3 transition-colors duration-300 ease-in-out hover:bg-black">
+                          <li className="mt-5 group w-full bg-black/20 p-4 transition-colors duration-300 ease-in-out hover:bg-black">
                               <Link
                                   href={menuEspacial.tracking.href}
                                   onClick={closeMenu}
-                                  className="flex flex-row items-center gap-3 font-body text-xs font-semibold uppercase tracking-wide transition-colors duration-300 ease-in-out group-hover:text-white"> 
-                                  <RiLoginCircleFill className="size-4 transition-transform duration-300 ease-in-out group-hover:scale-150 group-hover:text-secondary" />
+                                  className="flex flex-row items-center gap-3 font-heading text-base font-bold uppercase tracking-wide transition-colors duration-300 ease-in-out group-hover:text-white"> 
+                                  <RiLoginCircleFill className="size-5 transition-transform duration-300 ease-in-out group-hover:scale-150 group-hover:text-secondary" />
                                   {menuEspacial.tracking.name}
                               </Link>
                           </li>
 
-                          <li className="group bg-secondary px-4 py-3 transition-colors duration-300 ease-in-out hover:bg-black">
+                          <li className="group w-full bg-secondary p-4 transition-colors duration-300 ease-in-out hover:bg-black">
                               <Link
                                   href={menuEspacial.contacto.href}
                                   onClick={closeMenu}
-                                  className="flex flex-row items-center gap-3 font-body text-xs font-semibold uppercase tracking-wide transition-colors duration-300 ease-in-out group-hover:text-white">
-                                   <GrContact   className="size-4 group-hover:text-secondary group-hover:scale-150 transition-transform duration-300 ease-in-out"/>
+                                  className=" flex flex-row items-center gap-3 font-heading text-base font-bold uppercase tracking-wide transition-colors duration-300 ease-in-out group-hover:text-white">
+                                   <GrContact   className="size-5 group-hover:text-secondary group-hover:scale-150 transition-transform duration-300 ease-in-out"/>
                                   {menuEspacial.contacto.name}
                               </Link>
                           </li>

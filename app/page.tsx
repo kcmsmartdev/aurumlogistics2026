@@ -15,7 +15,7 @@ export default function Home() {
    <main>
       <Hero />
       <Nosotros />
-      <Servicios />
+      <Servicios/>
       <Operaciones />
       <Cta />
    </main>

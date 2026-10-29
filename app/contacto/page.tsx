@@ -13,7 +13,7 @@ export const metadata:Metadata={
 export default function Contacto(){
     return(
         <main className="flex flex-col relative">
-             <div className="mt-16 w-full h-48 flex flex-col items-center justify-center lg:h-72 bg-center bg-cover bg-no-repeat" style={{backgroundImage:"url('/images/bg-services.webp')"}} >
+             <div className=" w-full h-48 flex flex-col items-center justify-center lg:h-72 bg-center bg-cover bg-no-repeat" style={{backgroundImage:"url('/images/bg-services.webp')"}} >
                 <p className="font-body font-bold text-white text-3xl lg:text-5xl">
                     CONTACTO
                 </p>
@@ -23,12 +23,7 @@ export default function Contacto(){
                <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.5fr] gap-12 lg:gap-16">
                 
                 <div className="flex flex-col">
-                     <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold uppercase mb-4">
-                        Hablemos de tu próxima operación logística.
-                    </h1>
-                    <p className="font-body text-xl md:text-lg text-muted font-medium">
-                       Completa el formulario con los detalles de tu operación y nuestro equipo podrá evaluar tu solicitud.
-                    </p>
+                     
 
                     <FormularioContacto />
                     

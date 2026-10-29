@@ -10,7 +10,7 @@ import FormularioReclamo from "@/components/contacto/FormularioReclamo";
 export default function GenerarReclamo(){
     return(
         <main className="flex flex-col">
-            <div className="mt-16 w-full h-48 flex flex-col items-center justify-center lg:h-72 bg-black">
+            <div className="w-full h-48 flex flex-col items-center justify-center lg:h-72 bg-black">
                 <p className="font-body font-bold text-white text-3xl lg:text-5xl">
                     RECLAMOS
                 </p>

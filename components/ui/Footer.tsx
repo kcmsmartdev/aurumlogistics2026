@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaSquarePhone } from "react-icons/fa6";
-import { ImMail } from "react-icons/im";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { IoMail } from "react-icons/io5";
+
 
 interface FooterLink {
     title:string;
@@ -45,7 +46,7 @@ const linksFooter:FooterSection[]=[
 ]
 export default function Footer(){
     return(
-        <footer className="w-full bg-linear-to-b from-accent to-primary">
+        <footer className="w-full bg-linear-to-b from-black to-primary">
             <div className="max-w-7xl mx-auto px-3 pt-12 flex flex-col">
                 <div className="grid max-[390px]:grid-cols-1 grid-cols-2 gap-8 lg:flex lg:flex-wrap lg:justify-between py-10">
                     {
@@ -89,14 +90,14 @@ export default function Footer(){
 
                     <Link href={"callto:51950306765"}
                     className="font-body text-sm md:text-lg text-white flex items-center gap-1.5 mb-2 hover:text-muted-reverse">
-                        <FaSquarePhone className="text-white size-3 sm:size-4" />
+                        <BsFillTelephoneFill className="text-white size-3 sm:size-4" />
                         +51 950 306 765
                     </Link>
 
                     <Link 
                     href={"mailto:gerencia@aurumlogistics.com.pe"}
                     className="font-body text-sm md:text-lg text-white flex items-center gap-1.5 hover:text-muted-reverse">
-                        <ImMail className="text-white size-3 sm:size-4" />
+                        <IoMail className="text-white size-3 sm:size-4" />
                         gerencia@aurumlogistics.com.pe
                     </Link>
             

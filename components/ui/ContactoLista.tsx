@@ -19,7 +19,7 @@ const listaContacto:Contacto[]= [
 export default function ContactoLista(){
     return(
         <div className="w-full flex flex-col mt-16">
-            <h2 className="font-heading font-bold text-primary text-2xl uppercase tracking-wider">
+            <h2 className="font-heading text-primary text-xl font-bold uppercase tracking-tight ">
                 Contactos
             </h2>
 
@@ -30,7 +30,7 @@ export default function ContactoLista(){
                         return(
                         <li key={e.name} className="py-2">
                             <Link href={e.href} target="_blank"
-                            className="flex flex-row gap-4 items-center font-body text-black text-base hover:text-primary">
+                            className="flex flex-row gap-4 items-center font-body text-black text-sm hover:text-primary font-bold">
                                 <Icon className="text-primary size-4" />
                                 {e.name}
                             </Link>
@@ -41,15 +41,15 @@ export default function ContactoLista(){
             </ul>
 
              <div className="mt-12">
-                <h2 className="font-heading font-bold text-primary text-2xl uppercase tracking-wider mb-4">
+                <h2 className="font-heading text-primary text-xl font-bold uppercase tracking-tight mb-2">
                     Folleto
                 </h2>
 
                 <Link 
                 target="_blank" 
                 href={"https://www.dropbox.com/scl/fi/h06tny5uz1hxtmh15scjb/Brochure_Aurum_Logistics.pdf?rlkey=xgx0fbbcsnxermqwsqjfb4wz9&st=6lajk2rb&dl=1"}
-                className="font-heading text-xl text-white font-semibold bg-primary p-5 flex flex-row items-center justify-center gap-2 hover:bg-black group">
-                    <IoMdDownload className="size-5  group-hover:text-secondary group-hover:scale-150 transition-transform duration-300 ease-in-out" />
+                className="font-heading text-xl text-muted font-semibold bg-gray p-5 flex flex-row items-center justify-center gap-2 hover:bg-sec group border border-transparent hover:text-black hover:border-black transition-transform duration-300 ease-in-out">
+                    <IoMdDownload className="size-5  group-hover:text-primary group-hover:scale-150 transition-transform duration-300 ease-in-out" />
                     DESCARGAR
                 </Link>
              </div>

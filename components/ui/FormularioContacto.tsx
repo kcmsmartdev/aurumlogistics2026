@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import { useState } from "react";
 const inputClass= "p-4 border border-border text-black focus:border-secondary focus:outline-none"
 const labelClass="font-heading tracking-widest text-xs uppercase text-muted/80 font-semibold"
@@ -15,6 +16,14 @@ export default function FormularioContacto(){
     }
     return(
         <form onSubmit={enviar} className="w-full flex flex-col gap-12 mt-16">
+            <div>
+                <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold  mb-4">
+                    Hablemos de tu próxima operación logística.
+                </h1>
+                <p className="font-body text-xl md:text-lg text-muted font-medium">
+                    Completa el formulario con los detalles de tu operación y nuestro equipo podrá evaluar tu solicitud.
+                </p>
+            </div>
            <div className="flex flex-col md:flex-row gap-4">
 
                 <div className="w-full flex flex-col gap-3">
@@ -56,7 +65,7 @@ export default function FormularioContacto(){
                     
                 </div>
                 <div className="w-full flex flex-col gap-3">
-                    <label htmlFor="phone" className={labelClass}>Teléfono</label>
+                    <label htmlFor="phone" className={labelClass}>Teléfono/Whatsapp</label>
                     <input type="number"
                     id="phone"
                     name="phone"
@@ -68,18 +77,27 @@ export default function FormularioContacto(){
             
             <div className="flex flex-col">
                 <label htmlFor="mensaje" className={labelClass}>Mensaje</label>
-                <textarea name="mensaje" id="mensaje" rows={6}
+                <textarea name="mensaje" id="mensaje" placeholder="Detalles adicionales..." rows={6}
                 className={`${inputClass}  text-start mt-4`}/>
                 
 
             </div>
-
+            <div className="flex flex-row gap-3 items-center">
+                <input type="checkbox"
+                required
+                className="size-4 text-black" />
+                <p className="font-body text-xs">
+                    Acepto la <Link className="text-primary font-semibold" href={"/informacion-legal/politica-de-privacidad"} target="_blank">Política de Privacidad</Link> y autorizo el tratamiento de mis datos personales para gestionar mi solicitud de cotización.
+                </p>
+            </div>
            <div>
                 <button
                     type="submit"
                     disabled={estado === "enviando"}
-                    className="w-full font-body font-semibold uppercase bg-primary px-5 py-6 text-white cursor-pointer">
-                        {estado === "enviando" ? "Enviando..." : "Enviar solicitud de cotización"}
+                    className="w-full font-body font-semibold uppercase bg-primary px-5 py-6 text-white cursor-pointer hover:bg-black group">
+                        <span className="inline-block group-hover:scale-105 duration-300 ease-in-out">
+                            {estado === "enviando" ? "Enviando..." : "Enviar solicitud de cotización"}
+                        </span>
                 </button>
                 <p role="status" aria-live="polite" className="min-h-6 font-body text-sm">
                     {estado === "ok" && "Mensaje enviado. Te responderemos pronto."}

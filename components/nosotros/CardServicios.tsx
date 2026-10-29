@@ -15,12 +15,12 @@ const cardServicios:Servicio[]=[
 ]
 export default function CardServicios(){
     return(
-       <div className="w-full mt-12 mx-auto flex flex-col items-center">
-            <h2 className="font-heading font-bold text-2xl lg:text-4xl tracking-widest">
+       <div className="w-full mt-28 mx-auto flex flex-col items-center">
+            <h2 className="font-heading font-bold text-2xl lg:text-3xl">
                 SOLUCIONES LOGÍSTICA PARA TUS OPERACIONES DE IMPORTACIÓN Y EXPORTACIÓN.
             </h2>
             
-            <ul className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-5">
+            <ul className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5">
                 {
                     cardServicios.map((child)=>(
                         <Link href={child.href}

@@ -20,13 +20,13 @@ export default function Nosotros(){
 
     return(
         <main className="flex flex-col">
-            <div className="mt-16 w-full h-48 flex flex-col items-center justify-center lg:h-72 bg-center bg-cover bg-no-repeat" style={{backgroundImage:"url('/images/bg-services.webp')"}} >
+            <div className="w-full h-48 flex flex-col items-center justify-center lg:h-72 bg-center bg-cover bg-no-repeat" style={{backgroundImage:"url('/images/bg-services.webp')"}} >
                 <p className="font-body font-bold text-white text-3xl lg:text-5xl">
                     SOBRE NOSOTROS
                 </p>
             </div>
             <div className="w-full max-w-7xl mx-auto px-3 py-16">
-               <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.5fr] gap-12 lg:gap-16">
+               <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.5fr] gap-12 lg:gap-12">
                 
                 <div className="flex flex-col">
                      <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold uppercase mb-8">

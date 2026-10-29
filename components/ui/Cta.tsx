@@ -10,8 +10,10 @@ export default function Cta(){
                 </h2>
                 
                 <Link href={"/contacto"}
-                className="font-heading text-white font-semibold border border-white px-12 py-5 hover:bg-primary hover:border-primary ">
-                    CONTÁCTANOS
+                className="font-heading text-white font-semibold border border-white px-12 py-5 hover:bg-primary hover:border-primary group">
+                   <span className="inline-block group-hover:scale-105 duration-300 transition-transform ease-in-out">
+                     CONTÁCTANOS
+                   </span>
                 </Link>
 
             </div>

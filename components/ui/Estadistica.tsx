@@ -25,12 +25,12 @@ export default function Estadisticas(){
                     return (
 
                         <div key={e.titulo} className="flex flex-row gap-1.5">
-                            <Icon className="size-10" /> 
+                            <Icon className="size-10 text-muted-reverse" /> 
                             <div className="flex flex-col">
-                                <p className="font-body text-sm">
+                                <p className="font-body text-sm md:text-base lg:text-2xl text-white">
                                     {e.titulo}
                                 </p>
-                                <span className="font-body text-muted text-xs">
+                                <span className="font-body text-muted-reverse text-xs lg:text-lg">
                                     {e.description}
                                 </span>
                             </div>
