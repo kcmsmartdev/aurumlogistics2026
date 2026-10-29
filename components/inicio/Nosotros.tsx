@@ -1,6 +1,5 @@
 import Mision from "../ui/Mison";
-
-
+import Image from "next/image";
 export default function Nosotros() {
     
 
@@ -9,7 +8,15 @@ export default function Nosotros() {
         aria-labelledby="about-title"
         className="flex w-full flex-col lg:flex-row">
    
-             <div aria-hidden="true" className="min-h-48 w-full bg-black p-5 lg:min-h-0 lg:w-1/2" />
+             <div aria-hidden="true" className="min-h-48 w-full bg-black p-5 lg:min-h-0 lg:w-1/2">
+                <Image 
+                src={"/images/img-nosotros.webp"} 
+                alt="Imagen nosotros" 
+                width={900} 
+                height={500}
+                loading="eager"
+                className="w-full h-auto" />
+             </div>
 
 
             <div className="w-full bg-gray px-3 py-28 md:px-8 lg:w-1/2 lg:p-16">
