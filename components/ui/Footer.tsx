@@ -14,7 +14,8 @@ interface FooterSection {
     child: FooterLink[];
 }
 
-const Years = new Date().getFullYear()
+import { CurrentYear } from "@/components/dashboard/current-year";
+
 const linksFooter:FooterSection[]=[
     {title:"Empresa", child:[
         {title:"Nosotros", href:"/nostros"},
@@ -32,7 +33,7 @@ const linksFooter:FooterSection[]=[
 
     {title:"Atención al cliente", child:[
         {title:"Tracking", href:"/tracking"},
-        {title:"Seguimiento de Reclamos", href:"/seguimiento-reclamo"},
+        {title:"Seguimiento de Reclamos", href:"/consultar-reclamo"},
         {title:"Consulta de una DAM", href:"https://ww3.sunat.gob.pe/aduanas/informao/HR10Poliza.htm"},
         {title:"Descargar Folleto", href:"#"},    
     ]},
@@ -111,7 +112,7 @@ export default function Footer(){
                     </Link>
 
                     <p className="font-body text-xs text-muted-reverse">
-                        ©{Years}  Aurum Logistics S.A.C.
+                        ©<CurrentYear />  Aurum Logistics S.A.C.
                     </p>
                 </div>
             </div>

@@ -47,8 +47,8 @@ const menu: MenuItem[] = [
 const menuEspacial = {
 
   tracking:{
-    name:"Tracking",
-    href:"/Tracking",
+    name:"tracking",
+    href:"/login",
   },
 
   contacto: {
@@ -176,7 +176,7 @@ export default function Navbar() {
         aria-label="Botón menú"
         onClick={()=>setOpen(!isOpen)}
         className="block lg:hidden">
-          {isOpen ? <MdClose className="size-8" /> : <HiOutlineMenuAlt4 className="size-8" />}
+          {isOpen ? <MdClose className="size-8 text-white" /> : <HiOutlineMenuAlt4 className="size-8 text-white" />}
         </button>
 
         <div className={`absolute right-0 top-full h-[calc(100dvh-100%)] w-3/4 overflow-y-auto bg-white px-3 py-5  transition-all duration-300 ease-in-out lg:hidden ${

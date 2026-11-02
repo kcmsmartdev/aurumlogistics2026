@@ -18,7 +18,7 @@ export default function Servicios(){
         <section className="w-full">
             <div className="max-w-7xl mx-auto px-3 py-28 mt-16 flex flex-col items-center">
                 <h2 className="mb-4 font-heading text-3xl md:text-5xl font-bold uppercase">
-                    Nuestros <span className="font-light">Servicios</span>
+                    Nuestros Servicios
                 </h2>
                 <p className="font-body text-lg text-muted max-w-3xl text-center">
                     Conoce nuestras soluciones de transporte y logística internacional, diseñadas para coordinar tus operaciones de importación y exportación de manera eficiente.

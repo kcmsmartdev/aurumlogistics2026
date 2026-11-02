@@ -1,7 +1,7 @@
 
 import { BiWorld } from "react-icons/bi";
 import Link from "next/link";
-import Estadisticas from "../ui/Estadistica";
+import Estadisticas from "./Estadistica";
 import { PiArrowUpRightBold } from "react-icons/pi";
 import HeroVideo from "./HeroVideo";
 
