@@ -47,7 +47,7 @@ const linksFooter:FooterSection[]=[
 ]
 export default function Footer(){
     return(
-        <footer className="w-full bg-linear-to-b from-black to-primary">
+        <footer className="w-full bg-linear-to-b from-accent to-primary">
             <div className="max-w-7xl mx-auto px-3 pt-12 flex flex-col">
                 <div className="grid max-[390px]:grid-cols-1 grid-cols-2 gap-8 lg:flex lg:flex-wrap lg:justify-between py-10">
                     {

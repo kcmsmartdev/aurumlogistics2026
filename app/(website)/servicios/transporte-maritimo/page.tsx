@@ -63,10 +63,31 @@ const cardServicios: Servicio[] = [
   },
 ];
 
-export const metada: Metadata = {
-  title: "Transporte Marítimo Internacional de Carga | Aurum Logistics",
+export const metadata: Metadata = {
+  title: "Transporte Marítimo Internacional de Carga en Perú",
   description:
-    "Transporte marítimo internacional de carga para empresas que importan y exportan desde Perú. Coordina tu operación con Aurum Logistics y solicita una cotización.",
+    "Gestionamos y coordinamos transporte marítimo internacional para empresas que importan y exportan desde Perú. Solicita una cotización con Aurum Logistics.",
+
+  alternates: {
+    canonical: "/servicios/transporte-maritimo",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "/servicios/transporte-maritimo",
+    title: "Transporte Marítimo Internacional de Carga | Aurum Logistics",
+    description:
+      "Coordinamos operaciones de transporte marítimo internacional para empresas que importan y exportan desde Perú.",
+    siteName: "Aurum Logistics",
+    locale: "es_PE",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Transporte Marítimo Internacional de Carga | Aurum Logistics",
+    description:
+      "Gestionamos y coordinamos operaciones de carga marítima internacional para empresas desde Perú.",
+  },
 };
 
 export default function TransporteMarítimo() {

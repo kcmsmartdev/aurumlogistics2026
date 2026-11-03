@@ -9,10 +9,31 @@ import { MdSecurity } from "react-icons/md";
 import { RiMindMap } from "react-icons/ri";
 import { IconType } from "react-icons";
 
-export const metada: Metadata = {
-  title: "Logística para Exportación de Minerales | Aurum Logistics",
+export const metadata: Metadata = {
+  title: "Logística para Exportación de Minerales en Perú",
   description:
-    "Coordinamos la logística para la exportación de minerales desde Perú hacia mercados internacionales, con especial atención a la confidencialidad y los requerimientos de cada operación.",
+    "Coordinamos la logística para exportar minerales desde Perú hacia Europa y Asia, con atención a la seguridad, confidencialidad y requerimientos de cada operación.",
+
+  alternates: {
+    canonical: "/servicios/valorado",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "/servicios/valorado",
+    title: "Logística para Exportación de Minerales | Aurum Logistics",
+    description:
+      "Gestionamos y coordinamos operaciones logísticas para la exportación internacional de minerales, con especial atención a la confidencialidad y los procesos del sector.",
+    siteName: "Aurum Logistics",
+    locale: "es_PE",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Logística para Exportación de Minerales | Aurum Logistics",
+    description:
+      "Coordinamos las etapas logísticas de exportación de minerales desde Perú hacia mercados internacionales.",
+  },
 };
 
 interface Beneficios {

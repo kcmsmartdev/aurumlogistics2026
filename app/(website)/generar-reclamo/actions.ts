@@ -1,9 +1,9 @@
-
 "use server";
 
 import { randomBytes } from "node:crypto";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { notificarReclamo } from "@/lib/email/notificaciones-reclamos";
 
 export type ClaimResult = {
   success: boolean;
@@ -225,6 +225,16 @@ export async function registrarReclamo(
           "No se pudo registrar tu solicitud. Inténtalo nuevamente.",
       };
     }
+
+    // Notificar a gerencia y al cliente
+    await notificarReclamo({
+      evento: "nuevo_reclamo",
+      reclamo: {
+        trackingCode,
+        fullName,
+        email,
+      },
+    });
 
     return {
       success: true,

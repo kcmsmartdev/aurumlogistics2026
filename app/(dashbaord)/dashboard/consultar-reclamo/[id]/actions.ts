@@ -1,8 +1,8 @@
-
 "use server";
 
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { notificarReclamo } from "@/lib/email/notificaciones-reclamos";
 
 export async function obtenerDetalleReclamo(id: string) {
   try {
@@ -164,7 +164,7 @@ export async function responderReclamo(
     // Verificar que el reclamo exista y pueda responderse
     const { data: claim, error: claimError } = await admin
       .from("claims")
-      .select("id, status")
+      .select("id, status, tracking_code, full_name, email")
       .eq("id", id)
       .maybeSingle();
 
@@ -229,6 +229,17 @@ export async function responderReclamo(
       };
     }
 
+    // Notificar a gerencia y al cliente
+    await notificarReclamo({
+      evento: "respuesta_reclamo",
+      reclamo: {
+        trackingCode: claim.tracking_code,
+        fullName: claim.full_name,
+        email: claim.email,
+      },
+      detalle: respuesta,
+    });
+
     return {
       success: true,
       message: "La respuesta se registró correctamente.",
@@ -242,8 +253,6 @@ export async function responderReclamo(
     };
   }
 }
-
-
 
 export async function gestionarRespuestaCliente(
   id: string,
@@ -326,7 +335,7 @@ export async function gestionarRespuestaCliente(
     const { data: claim, error: claimError } = await admin
       .from("claims")
       .select(
-        "id, tracking_code, document_type, document_number, company_id, status"
+        "id, tracking_code, document_type, document_number, company_id, status, full_name, email"
       )
       .eq("id", id)
       .eq("company_id", profile.company_id)
@@ -386,6 +395,20 @@ export async function gestionarRespuestaCliente(
       };
     }
 
+    // Notificar solamente cuando el cliente presenta una apelación
+    if (accion === "apelar") {
+      await notificarReclamo({
+        evento: "nueva_apelacion",
+        reclamo: {
+          trackingCode: claim.tracking_code,
+          fullName: claim.full_name,
+          email: claim.email,
+        },
+        detalle: detalleApelacion,
+        solucionSolicitada,
+      });
+    }
+
     return {
       success: true,
       message:
@@ -402,7 +425,6 @@ export async function gestionarRespuestaCliente(
     };
   }
 }
-
 
 export async function responderApelacionReclamo(
   id: string,
@@ -462,7 +484,7 @@ export async function responderApelacionReclamo(
     // Verificar que el reclamo exista y esté apelado
     const { data: claim, error: claimError } = await admin
       .from("claims")
-      .select("id, status")
+      .select("id, status, tracking_code, full_name, email")
       .eq("id", id)
       .maybeSingle();
 
@@ -523,6 +545,17 @@ export async function responderApelacionReclamo(
           "No se pudo registrar la respuesta de la apelación. Inténtalo nuevamente.",
       };
     }
+
+    // Notificar a gerencia y al cliente
+    await notificarReclamo({
+      evento: "respuesta_apelacion",
+      reclamo: {
+        trackingCode: claim.tracking_code,
+        fullName: claim.full_name,
+        email: claim.email,
+      },
+      detalle: respuesta,
+    });
 
     return {
       success: true,

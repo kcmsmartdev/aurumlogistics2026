@@ -4,7 +4,7 @@ export default function Nosotros() {
   return (
     <section
       aria-labelledby="about-title"
-      className="grid grid-cols-1 lg:grid-cols-2 gap-8"
+      className="flex flex-col-reverse lg:flex-row gap-8"
     >
       <div aria-hidden="true" className="w-full bg-gray">
         <Image

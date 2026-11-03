@@ -8,10 +8,33 @@ import { LuBox } from "react-icons/lu";
 import { TbSitemap } from "react-icons/tb";
 import { PiMapPinSimpleAreaFill } from "react-icons/pi";
 import Image from "next/image";
-export const metada: Metadata = {
-  title: "Transporte Terrestre de Carga | Aurum Logistics",
+
+
+export const metadata: Metadata = {
+  title: "Transporte Terrestre de Carga en Perú",
   description:
-    "Conoce las soluciones de transporte terrestre de Aurum Logistics para coordinar el traslado de mercancías y apoyar tus operaciones logísticas.",
+    "Gestionamos y coordinamos el transporte terrestre de mercancías para empresas en Perú. Organizamos el traslado según las necesidades de cada operación.",
+
+  alternates: {
+    canonical: "/servicios/transporte-terrestre",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "/servicios/transporte-terrestre",
+    title: "Transporte Terrestre de Carga | Aurum Logistics",
+    description:
+      "Coordinamos el transporte terrestre de carga y conectamos los puntos de origen y destino de tus operaciones logísticas.",
+    siteName: "Aurum Logistics",
+    locale: "es_PE",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Transporte Terrestre de Carga | Aurum Logistics",
+    description:
+      "Gestionamos y coordinamos el traslado terrestre de mercancías según los requerimientos de tu empresa.",
+  },
 };
 
 interface Beneficios {

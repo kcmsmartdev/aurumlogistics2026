@@ -10,11 +10,34 @@ import Contador from "@/components/shared/Contador";
 import AnimEstadisticas from "@/components/inicio/AnimEstadisticas";
 import CardServicios from "@/components/nosotros/CardServicios";
 
+
 export const metadata: Metadata = {
-  title: "Sobre Aurum Logistics | Logística Internacional en Perú",
+  title: "Nosotros | Agencia de Logística Internacional en Perú",
   description:
-    "Conoce Aurum Logistics S.A.C., empresa de logística internacional ubicada en el Callao, Perú, con más de cinco años de experiencia.",
+    "Conoce Aurum Logistics S.A.C., agencia de logística internacional ubicada en el Callao, Perú. Coordinamos operaciones de importación y exportación para empresas.",
+
+  alternates: {
+    canonical: "/nosotros",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "/nosotros",
+    title: "Nosotros | Aurum Logistics",
+    description:
+      "Conoce nuestra trayectoria, propósito y participación en la coordinación de operaciones logísticas internacionales desde Perú.",
+    siteName: "Aurum Logistics",
+    locale: "es_PE",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Nosotros | Aurum Logistics",
+    description:
+      "Conoce Aurum Logistics S.A.C. y nuestra labor en la coordinación de operaciones de comercio internacional.",
+  },
 };
+
 export default function Nosotros() {
   return (
     <main className="flex flex-col">

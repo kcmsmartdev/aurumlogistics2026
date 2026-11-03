@@ -10,11 +10,34 @@ import { VscTypeHierarchy } from "react-icons/vsc";
 import Image from "next/image";
 import Cta from "@/components/shared/Cta";
 
-export const metada: Metadata = {
-  title: "Transporte Aéreo Internacional de Carga | Aurum Logistics",
+
+export const metadata: Metadata = {
+  title: "Transporte Aéreo Internacional de Carga en Perú",
   description:
-    "Transporte aéreo internacional de carga para empresas que importan y exportan desde Perú. Coordina tu operación con Aurum Logistics y solicita una cotización.",
+    "Gestionamos y coordinamos transporte aéreo internacional de carga para empresas que importan y exportan desde Perú. Solicita una cotización con Aurum Logistics.",
+
+  alternates: {
+    canonical: "/servicios/transporte-aereo",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "/servicios/transporte-aereo",
+    title: "Transporte Aéreo Internacional de Carga | Aurum Logistics",
+    description:
+      "Coordinamos operaciones de transporte aéreo internacional para empresas importadoras y exportadoras desde Perú.",
+    siteName: "Aurum Logistics",
+    locale: "es_PE",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Transporte Aéreo Internacional de Carga | Aurum Logistics",
+    description:
+      "Gestionamos y coordinamos operaciones de carga aérea internacional para empresas desde Perú.",
+  },
 };
+
 
 interface Beneficios {
   icon: IconType;
@@ -115,9 +138,7 @@ export default function TransporteAereo() {
                 En <strong>Aurum Logistics</strong> coordinamos las necesidades
                 de tu operación para ayudarte a evaluar las opciones disponibles
                 para el traslado de tu carga, tanto en importaciones como en
-                exportaciones. Objetivo de esta sección: explicar qué es el
-                servicio, para quién está pensado y por qué puede ser una
-                alternativa adecuada.
+                exportaciones.
               </p>
             </div>
 

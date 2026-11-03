@@ -1,7 +1,7 @@
-
 "use server";
 
 import { createAdminClient } from "@/lib/supabase/admin";
+import { notificarReclamo } from "@/lib/email/notificaciones-reclamos";
 
 type AccionReclamo = "aceptar" | "apelar";
 
@@ -35,7 +35,7 @@ export async function consultarReclamo(
   try {
     const supabase = createAdminClient();
 
-    // Buscar solamente por código.
+    // Buscar solamente por código
     const { data: claim, error } = await supabase
       .from("claims")
       .select("*")
@@ -44,6 +44,7 @@ export async function consultarReclamo(
 
     if (error) {
       console.error("Error buscando reclamo:", error);
+
       return {
         success: false,
         message: "No se pudo consultar el reclamo.",
@@ -57,7 +58,7 @@ export async function consultarReclamo(
       };
     }
 
-    // Verificar identidad después de encontrar el reclamo.
+    // Verificar identidad después de encontrar el reclamo
     if (
       claim.document_type.trim().toLowerCase() !== tipo ||
       normalizar(claim.document_number) !== documento
@@ -68,7 +69,7 @@ export async function consultarReclamo(
       };
     }
 
-    // Obtener respuesta administrativa.
+    // Obtener respuesta administrativa
     const { data: response, error: responseError } = await supabase
       .from("claim_responses")
       .select("response, created_at")
@@ -77,13 +78,14 @@ export async function consultarReclamo(
 
     if (responseError) {
       console.error("Error obteniendo respuesta:", responseError);
+
       return {
         success: false,
         message: "No se pudo obtener la respuesta del reclamo.",
       };
     }
 
-    // Obtener apelación, si existe.
+    // Obtener apelación, si existe
     const { data: appeal, error: appealError } = await supabase
       .from("claim_appeals")
       .select("*")
@@ -92,6 +94,7 @@ export async function consultarReclamo(
 
     if (appealError) {
       console.error("Error obteniendo apelación:", appealError);
+
       return {
         success: false,
         message: "No se pudo obtener la apelación.",
@@ -188,10 +191,12 @@ export async function gestionarRespuestaPublica(
   try {
     const supabase = createAdminClient();
 
-    // Verificar nuevamente la identidad en el servidor.
+    // Verificar nuevamente la identidad en el servidor
     const { data: claim, error: claimError } = await supabase
       .from("claims")
-      .select("id, document_type, document_number")
+      .select(
+        "id, document_type, document_number, tracking_code, full_name, email"
+      )
       .eq("tracking_code", codigo)
       .maybeSingle();
 
@@ -212,6 +217,7 @@ export async function gestionarRespuestaPublica(
       };
     }
 
+    // Ejecutar la función RPC protegida en Supabase
     const { error } = await supabase.rpc(
       "gestionar_respuesta_reclamo",
       {
@@ -232,6 +238,20 @@ export async function gestionarRespuestaPublica(
         message:
           "No se pudo procesar la solicitud. Comprueba el estado del reclamo.",
       };
+    }
+
+    // Notificar solamente cuando se registra una apelación
+    if (accion === "apelar") {
+      await notificarReclamo({
+        evento: "nueva_apelacion",
+        reclamo: {
+          trackingCode: claim.tracking_code,
+          fullName: claim.full_name,
+          email: claim.email,
+        },
+        detalle,
+        solucionSolicitada: solucion,
+      });
     }
 
     return {
